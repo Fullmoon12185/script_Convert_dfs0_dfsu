@@ -1,0 +1,9 @@
+*.dfsu
+*.prj
+*.shp
+*.dbf
+*.dfs0
+__pycache__/
+*.txt
+tempOutputFiles/
+DFSU_ouputFiles/
