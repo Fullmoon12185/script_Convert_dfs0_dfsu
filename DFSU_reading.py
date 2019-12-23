@@ -4,7 +4,7 @@ from datetime import datetime
 from pydhi import dfs0 as dfs0
 from pydhi import dfsu as dfsu
 from glob import glob
-import shapefile
+# import shapefile
 
 # C:\Users\VAIO\AppData\Local\Programs\Python\Python37\Lib\site-packages\pydhi
 def dfsu_reading():
@@ -38,7 +38,8 @@ def dfsu_reading():
             f.write('Element' + ',' + names[index] + ',' + 'X' + ',' + 'Y')
             f.write("\n")
             for count, data in enumerate(i[:,idx]):
-                f.write(str(count) +',' + str(data) + ',' + str(ec[count, 0]) + ',' + str(ec[count, 1]))
+                # f.write(str(count) +',' + str(data) + ',' + str(ec[count, 0]) + ',' + str(ec[count, 1]))
+                f.write( str(ec[count, 0]) + ',' + str(ec[count, 1]) + ',' + str(data) )
                 f.write("\n")
             f.close()   
         index = index + 1        
@@ -64,9 +65,9 @@ def dfsu_reading():
     # print (names)
 
 
-def shapefile_reading():
-    with shapefile.Reader("ngap_LV_PY_max_cells_0.shp") as shp:
-        print(shp)
+# def shapefile_reading():
+#     with shapefile.Reader("ngap_LV_PY_max_cells_0.shp") as shp:
+#         print(shp)
 
 # shapefile_reading()
 dfsu_reading()

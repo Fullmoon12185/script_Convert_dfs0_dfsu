@@ -4,7 +4,6 @@ import datetime
 from pydhi import dfs0 as dfs0
 
 
-
 def test_create_equidistant_calendar():
 
     dfs0file = r'random.dfs0'
@@ -70,3 +69,5 @@ def test_read_dfs0_to_matrix():
     mat = dfs.read(dfs0file, indices=[0])[0]
 
     assert np.isnan(mat[2, 0])
+
+
